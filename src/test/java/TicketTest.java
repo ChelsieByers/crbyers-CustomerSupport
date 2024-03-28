@@ -1,3 +1,13 @@
+// NAME: <Chelsie Byers>
+// CLASS: Info 1541/Spring
+// ASSIGNMENT: <Crbyers-Assignment 4>
+// DATE: <3/27/2024/4/3/2024>
+// RESOURCES: <I used the resource videos and lectures from this class and
+
+//This program will allow a user to test their ticketing system for any failures>
+
+import com.example.crbyerscustomersupport.Attachment;
+import com.example.crbyerscustomersupport.Ticket;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

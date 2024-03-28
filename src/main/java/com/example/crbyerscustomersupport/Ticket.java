@@ -1,3 +1,13 @@
+package com.example.crbyerscustomersupport;// NAME: <Chelsie Byers>
+// CLASS: Info 1541/Spring
+// ASSIGNMENT: <Crbyers-Assignment 4>
+// DATE: <3/27/2024/4/3/2024>
+// RESOURCES: <I used the resource videos and lectures from this class and
+
+//This program will allow a user to input a ticket to report any support issues with their accounts>
+
+import com.example.crbyerscustomersupport.Attachment;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -62,7 +72,7 @@ public class Ticket {
     //write the inputs to the ticket string
     @Override
     public String toString() {
-        return "Ticket{" + "customerName='" + customerName + '\'' +
+        return "com.example.crbyerscustomersupport.Ticket{" + "customerName='" + customerName + '\'' +
                 ", subject='" + subject + '\'' +
                 ", body='" + body + '\'' +
                 ", attachmentsMap=" + attachmentMap +
