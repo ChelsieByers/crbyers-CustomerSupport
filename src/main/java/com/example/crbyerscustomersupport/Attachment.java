@@ -1,21 +1,22 @@
-package com.example.crbyerscustomersupport;// NAME: <Chelsie Byers>
+// NAME: <Chelsie Byers>
 // CLASS: Info 1541/Spring
 // ASSIGNMENT: <Crbyers-Assignment 4>
 // DATE: <3/27/2024/4/3/2024>
-// RESOURCES: <I used the resource videos and lectures from this class and
+// RESOURCES: <I used the resource videos and lectures from this class and Professional Java for Web Applications>
 
 //This program will allow a user to input a ticket to report any support issues with their accounts>
-// and add attachments to their support ticket>
+
+package com.example.crbyerscustomersupport;
 
 public class Attachment {
     //set up my variables
 
-    private String name;
+    private static String name;
 
-    private byte[] contents;
+    private static byte[] contents;
 
     //set up my getters and setters
-    public String getName() {
+    public static String getName() {
         return name;
     }
 
@@ -23,7 +24,7 @@ public class Attachment {
         this.name = name;
     }
 
-    public byte[] getContents() {
+    public static byte[] getContents() {
         return contents;
     }
     //set up my java bean contents
