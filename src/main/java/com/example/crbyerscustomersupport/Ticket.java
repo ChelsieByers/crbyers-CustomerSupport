@@ -1,12 +1,14 @@
-package com.example.crbyerscustomersupport;// NAME: <Chelsie Byers>
+// NAME: <Chelsie Byers>
 // CLASS: Info 1541/Spring
 // ASSIGNMENT: <Crbyers-Assignment 4>
 // DATE: <3/27/2024/4/3/2024>
-// RESOURCES: <I used the resource videos and lectures from this class and
+// RESOURCES: <I used the resource videos and lectures from this class and Professional Java for Web Applications>
 
 //This program will allow a user to input a ticket to report any support issues with their accounts>
 
-import com.example.crbyerscustomersupport.Attachment;
+
+package com.example.crbyerscustomersupport;
+
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,6 +18,7 @@ public class Ticket {
     private String customerName;
     private String subject;
     private String body;
+    private Attachment attachment;
     private Map<Integer, Attachment> attachmentMap = new HashMap<>();
 
     //constructor
@@ -28,6 +31,7 @@ public class Ticket {
         this.customerName = customerName;
         this.subject = subject;
         this.body = body;
+        this.attachment = attachment;
     }
 
     //creating my getters and setters
@@ -35,7 +39,7 @@ public class Ticket {
         return customerName;
     }
 
-    public void setCustomerName(String customerName) {
+    public void setCustomerName() {
         this.customerName = customerName;
     }
 
@@ -55,6 +59,14 @@ public class Ticket {
         this.body = body;
     }
 
+    public Attachment getAttachment() {
+        return attachment;
+    }
+
+    public void setAttachment(Attachment attachment) {
+        this.attachment = attachment;
+    }
+
     public void addAttachment (int index, Attachment attachment) {
         attachmentMap.put(index, attachment);
     }
@@ -67,6 +79,9 @@ public class Ticket {
 
     public Map<Integer, Attachment> getAllAttachments() {
         return attachmentMap;
+    }
+    public boolean hasAttachment() {
+        return Attachment.getName().length() > 0 && Attachment.getContents().length > 0;
     }
 
     //write the inputs to the ticket string
