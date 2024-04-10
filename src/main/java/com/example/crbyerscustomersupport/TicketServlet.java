@@ -62,7 +62,11 @@ public class TicketServlet extends HttpServlet {
 
     //method to list out the different tickets submitted by the user
     private void listPosts(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
+
+        request.setAttribute("ticketDatabase", ticketDB);
+        request.getRequestDispatcher("WEB-INF/jsp/view/listTickets.jsp").forward(request, response);
+
+        /*PrintWriter out = response.getWriter();
 
         //heading and link to create a tickets
         out.println("<html><body><h2>Tickets</h2>");
@@ -79,7 +83,7 @@ public class TicketServlet extends HttpServlet {
                 out.println(ticket.getSubject() + "</a><br>");
             }
         }
-        out.println("</body></html>");
+        out.println("</body></html>");*/
 
     }
 
@@ -166,8 +170,11 @@ public class TicketServlet extends HttpServlet {
         String idString = request.getParameter("ticketId");
 
         Ticket ticket = getTicket(idString, response);
+        request.setAttribute("ticket", ticket);
+        request.setAttribute("ticketId", idString);
+        request.getRequestDispatcher("WEB-INF/jsp/view/viewTicket.jsp").forward(request, response);
 
-        PrintWriter out = response.getWriter();
+        /*PrintWriter out = response.getWriter();
         out.println("<html><body><h2>Tickets</h2>");
         out.println("<h3>" + ticket.getSubject() + "</h3>");
         out.println("<p>" + ticket.getBody() + "</p>");
@@ -178,15 +185,15 @@ public class TicketServlet extends HttpServlet {
 
         }
         out.println("<a href=\"ticket\">Return to ticket list</a>");
-        out.println("</body></html>");
+        out.println("</body></html>");*/
 
     }
 
     //method to show the form to submit from the user
     private void showPostForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
+        request.getRequestDispatcher("WEB-INF/jsp/view/ticketForm.jsp").forward(request, response);
 
-        out.println("<html><body><h2>Create a Ticket</h2>");
+        /*out.println("<html><body><h2>Create a Ticket</h2>");
         out.println("<form method=\"POST\" action=\"ticket\" enctype=\"multipart/form-data\">");
         out.println("<input type=\"hidden\" name=\"action\" value=\"create\">");
         out.println("Subject:<br>");
@@ -196,7 +203,7 @@ public class TicketServlet extends HttpServlet {
         out.println("<b>Attachment</b><br>");
         out.println("<input type=\"file\" name=\"file1\"><br><br>");
         out.println("<input type=\"submit\" value=\"Submit\">");
-        out.println("</form></body></html>");
+        out.println("</form></body></html>");*/
 
     }
 
