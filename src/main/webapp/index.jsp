@@ -6,7 +6,7 @@
 
 <%--This program will allow a user to input a ticket to report any support issues with their accounts>--%>
 
-
+<%--forward the page to my ticket.java file--%>
 <jsp:forward page="/ticket"/>
 
 

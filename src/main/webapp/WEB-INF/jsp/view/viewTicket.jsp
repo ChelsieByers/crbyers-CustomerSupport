@@ -11,6 +11,7 @@
     String ticketId = (String)request.getAttribute("ticketId");
     Ticket ticket = (Ticket)request.getAttribute("ticket");
 %>
+<%--create my form--%>
 <html>
 <head>
     <title>Ticket # <%=ticketId%></title>

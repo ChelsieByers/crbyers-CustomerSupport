@@ -17,6 +17,7 @@
     <title>Title</title>
 </head>
 <body>
+<%--display the ticket list and information back to the user--%>
     <h2>Ticket List</h2>
     <a href="ticket?action=createTicket">Create Ticket</a><br><br>
     <%
