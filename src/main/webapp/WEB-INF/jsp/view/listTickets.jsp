@@ -17,6 +17,7 @@
     <title>Title</title>
 </head>
 <body>
+<a href="${pageContext.request.contextPath}/login?logout=true">Logout</a>
 <%--display the ticket list and information back to the user--%>
     <h2>Ticket List</h2>
     <a href="ticket?action=createTicket">Create Ticket</a><br><br>
@@ -31,7 +32,5 @@
     <a href="ticket?action=view&ticketId=<%=id%>"><%=ticket.getSubject()%></a><br>
         <%}
     }%>
-
-
 </body>
 </html>

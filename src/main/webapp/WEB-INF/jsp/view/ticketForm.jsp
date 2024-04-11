@@ -11,6 +11,8 @@
     <title>Create a New Ticket Form</title>
 </head>
 <body>
+<a href="${pageContext.request.contextPath}/login?logout=true">Logout</a>
+
     <h2>Create a Ticket</h2>
     <form method="POST" action="ticket" enctype="multipart/form-data">
         <input type="hidden" name="action" value="create">

@@ -1,13 +1,18 @@
 <html>
 <head>
-    <title>Log Login</title>
+    <title>Ticket Login</title>
 </head>
 <body>
     <h2>Login</h2>
     You must log in to access the ticket system.<br><br>
-    <form method ="POST" action="login">
-        Username: <input type="text" name="username"><br><br>
-        Password: <input type="password" name="password"><br><br>
+    <c:if test="${loginFailed == true}">
+        <b><c:out value="The username or password you entered is not correct, Please try again."></c:out></b><br>
+    </c:if>
+    <form method="POST" action="${pageContext.request.contextPath}/login">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
         <input type="submit" value="Log In">
     </form>
 </body>

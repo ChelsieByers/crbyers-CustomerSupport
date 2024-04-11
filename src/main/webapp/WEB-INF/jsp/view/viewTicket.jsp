@@ -17,6 +17,7 @@
     <title>Ticket # <%=ticketId%></title>
 </head>
 <body>
+<a href="${pageContext.request.contextPath}/login?logout=true">Logout</a>
     <h2>Ticket</h2>
     <h3>Ticket # <%=ticketId%>: <%=ticket.getSubject()%></h3>
     <p><%=ticket.getBody()%></p>
