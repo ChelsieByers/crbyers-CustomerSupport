@@ -5,8 +5,12 @@
     <title>Ticket Session Admin View</title>
 </head>
 <body>
-<a href="${pageContext.request.contextPath}/login?logout=true">Logout</a>
+<%--logout button--%>
+<a href="<c:url value='/login'>
+        <c:param name='logout'/>
+    </c:url>">Logout</a>
     <h2>Sessions</h2>
+<%--for loop to show the number of sessions--%>
     There are a total of <c:out value="${numSessions}"/> active sessions going on.
     <ul>
         <c:forEach items="${sessionList}" var="s">

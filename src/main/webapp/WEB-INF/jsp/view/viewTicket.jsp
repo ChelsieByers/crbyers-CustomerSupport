@@ -6,7 +6,7 @@
 
 <%--This program will allow a user to input a ticket to report any support issues with their accounts>--%>
 
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
     String ticketId = (String)request.getAttribute("ticketId");
     Ticket ticket = (Ticket)request.getAttribute("ticket");
@@ -17,7 +17,9 @@
     <title>Ticket # <%=ticketId%></title>
 </head>
 <body>
-<a href="${pageContext.request.contextPath}/login?logout=true">Logout</a>
+<a href="<c:url value='/login'>
+        <c:param name='logout'/>
+    </c:url>">Logout</a>
     <h2>Ticket</h2>
     <h3>Ticket # <%=ticketId%>: <%=ticket.getSubject()%></h3>
     <p><%=ticket.getBody()%></p>
