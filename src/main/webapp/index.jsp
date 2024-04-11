@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--NAME: <Chelsie Byers>--%>
 <%--CLASS: Info 1541/Spring--%>
 <%--ASSIGNMENT: <Crbyers-Assignment 4>--%>
@@ -7,19 +8,5 @@
 <%--This program will allow a user to input a ticket to report any support issues with their accounts>--%>
 
 <%--forward the page to my ticket.java file--%>
-<jsp:forward page="/ticket"/>
+<c:redirect url="/ticket"/>
 
-
-<%--<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>--%>
-<%--<!DOCTYPE html>--%>
-<%--<html>--%>
-<%--<head>--%>
-<%--    <title>JSP - Hello World</title>--%>
-<%--</head>--%>
-<%--<body>--%>
-<%--<h1><%= "Welcome to the ticketing system" %>--%>
-<%--</h1>--%>
-<%--<br/>--%>
-<%--<a href="ticket">Go to tickets</a>--%>
-<%--</body>--%>
-<%--</html>--%>

@@ -28,12 +28,6 @@ public class TicketServlet extends HttpServlet {
     // set up my doGet post to get the form for responses
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //check for log in
-        if (request.getSession().getAttribute("username")==null) {
-            response.sendRedirect("login");
-            return;
-        }
-
         String action = request.getParameter("action");
 
         if (action == null) {
@@ -50,12 +44,6 @@ public class TicketServlet extends HttpServlet {
     //set up my doPost method to create the ticket from the form submitted by the user
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //check for log in
-        if (request.getSession().getAttribute("username")==null) {
-            response.sendRedirect("login");
-            return;
-        }
-
         String action = request.getParameter("action");
 
         if (action == null) {
