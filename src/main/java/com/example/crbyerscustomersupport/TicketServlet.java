@@ -28,7 +28,6 @@ public class TicketServlet extends HttpServlet {
     // set up my doGet post to get the form for responses
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //response.setContentType("text/html");
         //check for log in
         if (request.getSession().getAttribute("username")==null) {
             response.sendRedirect("login");
@@ -75,24 +74,6 @@ public class TicketServlet extends HttpServlet {
         request.setAttribute("ticketDatabase", ticketDB);
         request.getRequestDispatcher("WEB-INF/jsp/view/listTickets.jsp").forward(request, response);
 
-        /*PrintWriter out = response.getWriter();
-
-        //heading and link to create a tickets
-        out.println("<html><body><h2>Tickets</h2>");
-        out.println("<a href=\"ticket?action=createTicket\">Create Ticket</a><br><br>");
-
-        // list out the tickets
-        if (ticketDB.size() == 0) {
-            out.println("There are no tickets yet...");
-        } else {
-            for (int id : ticketDB.keySet()) {
-                Ticket ticket = ticketDB.get(id);
-                out.println("Ticket # " + id);
-                out.println(": <a href=\"ticket?action=view&ticketId=" + id + "\">");
-                out.println(ticket.getSubject() + "</a><br>");
-            }
-        }
-        out.println("</body></html>");*/
 
     }
 
@@ -127,7 +108,7 @@ public class TicketServlet extends HttpServlet {
         return null;
     }
 
-    //method to add int he attachment to the ticket
+    //method to add in the attachment to the ticket
     private Attachment processAttachment(Part file) throws IOException {
         InputStream in = file.getInputStream();
         ByteArrayOutputStream out = new ByteArrayOutputStream();
@@ -183,36 +164,12 @@ public class TicketServlet extends HttpServlet {
         request.setAttribute("ticketId", idString);
         request.getRequestDispatcher("WEB-INF/jsp/view/viewTicket.jsp").forward(request, response);
 
-        /*PrintWriter out = response.getWriter();
-        out.println("<html><body><h2>Tickets</h2>");
-        out.println("<h3>" + ticket.getSubject() + "</h3>");
-        out.println("<p>" + ticket.getBody() + "</p>");
-        if (ticket.hasAttachment()) {
-          out.println("<a href=\"ticket?action=download&ticketId=" +
-                  idString + "&attachment=" + ticket.getAttachment().getName() + "\">" +
-                  ticket.getAttachment().getName() + "</a><br><br>");
-
-        }
-        out.println("<a href=\"ticket\">Return to ticket list</a>");
-        out.println("</body></html>");*/
 
     }
 
     //method to show the form to submit from the user
     private void showPostForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("WEB-INF/jsp/view/ticketForm.jsp").forward(request, response);
-
-        /*out.println("<html><body><h2>Create a Ticket</h2>");
-        out.println("<form method=\"POST\" action=\"ticket\" enctype=\"multipart/form-data\">");
-        out.println("<input type=\"hidden\" name=\"action\" value=\"create\">");
-        out.println("Subject:<br>");
-        out.println("<input type=\"text\" name=\"subject\"><br><br>");
-        out.println("Body:<br>");
-        out.println("<textarea name=\"body\" rows=\"25\" cols=\"100\"></textarea><br><br>");
-        out.println("<b>Attachment</b><br>");
-        out.println("<input type=\"file\" name=\"file1\"><br><br>");
-        out.println("<input type=\"submit\" value=\"Submit\">");
-        out.println("</form></body></html>");*/
 
     }
 
