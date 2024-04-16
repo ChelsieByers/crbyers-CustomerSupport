@@ -9,19 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e32dbb1e-1fbe-46ee-a1fc-0d3acbb91602" name="Changes" comment="Module 6 Build2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/AuthenticationFilter.java" afterDir="false" />
+    <list default="true" id="e32dbb1e-1fbe-46ee-a1fc-0d3acbb91602" name="Changes" comment="Module 6 Build3">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/config/Bootstrap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/config/RootContextConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/config/ServletContextConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/SessionListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/SessionListServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/SessionListUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/SessionListUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/SessionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/SessionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/TicketServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/TicketServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/listTickets.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/listTickets.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/sessions.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/sessions.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/ticketForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/ticketForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/viewTicket.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/viewTicket.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,6 +193,9 @@
       <workItem from="1712752807930" duration="877000" />
       <workItem from="1712780385443" duration="6892000" />
       <workItem from="1712791968480" duration="10854000" />
+      <workItem from="1712875678681" duration="299000" />
+      <workItem from="1712934862750" duration="726000" />
+      <workItem from="1713281161923" duration="3299000" />
     </task>
     <task id="LOCAL-00001" summary="Initial ticket, attachment, and testing classes">
       <option name="closed" value="true" />
@@ -265,7 +261,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712872843088</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Module 6 Build3">
+      <option name="closed" value="true" />
+      <created>1712875751155</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712875751155</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,6 +294,7 @@
     <MESSAGE value="Module 5 Build3" />
     <MESSAGE value="Module 6 Build1" />
     <MESSAGE value="Module 6 Build2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Module 6 Build2" />
+    <MESSAGE value="Module 6 Build3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Module 6 Build3" />
   </component>
 </project>
