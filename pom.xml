@@ -52,7 +52,6 @@
             <artifactId>spring-webmvc</artifactId>
             <version>6.1.6</version>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/jakarta.inject/jakarta.inject-api -->
         <dependency>
             <groupId>jakarta.inject</groupId>
@@ -65,9 +64,6 @@
             <artifactId>jakarta.annotation-api</artifactId>
             <version>3.0.0</version>
         </dependency>
-
-
-
 
     </dependencies>
 

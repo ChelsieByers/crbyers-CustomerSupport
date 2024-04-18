@@ -1,4 +1,4 @@
-package com.example.crbyerscustomersupport.config;
+package com.example.crbyerscustomersupport.Config;
 
 import jakarta.servlet.MultipartConfigElement;
 import jakarta.servlet.ServletContext;
@@ -29,4 +29,3 @@ public class Bootstrap implements WebApplicationInitializer {
 
     }
 }
-

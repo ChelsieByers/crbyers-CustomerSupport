@@ -1,4 +1,4 @@
-package com.example.crbyerscustomersupport.config;
+package com.example.crbyerscustomersupport.Config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

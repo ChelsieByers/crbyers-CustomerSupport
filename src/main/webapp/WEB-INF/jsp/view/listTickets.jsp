@@ -21,18 +21,18 @@
         <c:param name='logout'/>
     </c:url>">Logout</a>
 <%--display the ticket list and information back to the user--%>
-    <h2>Ticket List</h2>
-    <a href="ticket?action=createTicket">Create Ticket</a><br><br>
-    <%
-        if(db.size() == 0) {%>
-            <%="There are no tickets yet..."%>
-        <%}
-        else {
-            for (int id : db.keySet()) {
-                Ticket ticket = db.get(id);%>
-                <%="Ticket # " + id%>
-    <a href="ticket?action=view&ticketId=<%=id%>"><%=ticket.getSubject()%></a><br>
-        <%}
-    }%>
+<h2>Ticket List</h2>
+<a href="ticket?action=createTicket">Create Ticket</a><br><br>
+<%
+    if(db.size() == 0) {%>
+<%="There are no tickets yet..."%>
+<%}
+else {
+    for (int id : db.keySet()) {
+        Ticket ticket = db.get(id);%>
+<%="Ticket # " + id%>
+<a href="ticket?action=view&ticketId=<%=id%>"><%=ticket.getSubject()%></a><br>
+<%}
+}%>
 </body>
 </html>
