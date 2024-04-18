@@ -20,14 +20,14 @@
 <a href="<c:url value='/login'>
         <c:param name='logout'/>
     </c:url>">Logout</a>
-    <h2>Ticket</h2>
-    <h3>Ticket # <%=ticketId%>: <%=ticket.getSubject()%></h3>
-    <p><%=ticket.getBody()%></p>
-    <%if (ticket.hasAttachment()) {%>
-    <a href="ticket?action=download&ticketId=<%=ticketId%>&attachment=<%=ticket.getAttachment().getName()%>">
-        <%=ticket.getAttachment().getName()%></>
-    <%}%>
-    <br><a href="ticket">Return to ticket list</a>
+<h2>Ticket</h2>
+<h3>Ticket # <%=ticketId%>: <%=ticket.getSubject()%></h3>
+<p><%=ticket.getBody()%></p>
+<%if (ticket.hasAttachment()) {%>
+<a href="ticket?action=download&ticketId=<%=ticketId%>&attachment=<%=ticket.getAttachment().getName()%>">
+    <%=ticket.getAttachment().getName()%></>
+<%}%>
+<br><a href="ticket">Return to ticket list</a>
 
 </body>
 </html>

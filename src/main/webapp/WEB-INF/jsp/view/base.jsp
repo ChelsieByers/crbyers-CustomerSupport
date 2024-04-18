@@ -7,4 +7,3 @@
 --%>
 <%@ page import="com.example.crbyerscustomersupport.Ticket, com.example.crbyerscustomersupport.Attachment" %>
 <%@page session="false" %>
-

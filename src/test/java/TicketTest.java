@@ -10,7 +10,7 @@ import com.example.crbyerscustomersupport.Attachment;
 import com.example.crbyerscustomersupport.Ticket;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TicketTest {
 

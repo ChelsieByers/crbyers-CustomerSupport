@@ -9,4 +9,3 @@
 
 <%--forward the page to my ticket.java file--%>
 <c:redirect url="/ticket"/>
-
