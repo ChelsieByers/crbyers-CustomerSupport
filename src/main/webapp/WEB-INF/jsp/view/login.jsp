@@ -1,22 +1,21 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <html>
 <head>
     <title>Ticket Login</title>
 </head>
 <body>
 <h2>Login</h2>
-You must log in to access the ticket system.<br><br>
+You must log in to access the ticket website.<br><br>
 <c:if test="${loginFailed == true}">
     <b><c:out value="The username or password you entered is not correct, Please try again."></c:out></b><br>
 </c:if>
-<form method="POST" action="<c:url value='/login'/>">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username"><br><br>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password"><br><br>
+<form:form method="POST" action="login" modelAttribute="loginForm">
+    <form:label path="username">Username:&nbsp;</form:label>
+    <form:input path="username"/><br><br>
+    <form:label path="password">Password:&nbsp;</form:label>
+    <form:password path="password"/><br><br>
     <input type="submit" value="Log In">
-</form>
+</form:form>
+
 </body>
 </html>
 

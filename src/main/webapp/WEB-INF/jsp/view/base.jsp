@@ -5,5 +5,6 @@
   Time: 7:12 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page import="com.example.crbyerscustomersupport.Ticket, com.example.crbyerscustomersupport.Attachment" %>
-<%@page session="false" %>
+<%@ page session="false" errorPage="error.jsp" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
