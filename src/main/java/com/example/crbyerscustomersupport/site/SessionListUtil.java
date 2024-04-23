@@ -1,8 +1,11 @@
-package com.example.crbyerscustomersupport;
+package com.example.crbyerscustomersupport.site;
 
 import jakarta.servlet.http.HttpSession;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class SessionListUtil {
     //Mapping my sessions

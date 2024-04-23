@@ -6,28 +6,20 @@
 
 <%--This program will allow a user to input a ticket to report any support issues with their accounts>--%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%
-    String ticketId = (String)request.getAttribute("ticketId");
-    Ticket ticket = (Ticket)request.getAttribute("ticket");
-%>
-<%--create my form--%>
 <html>
 <head>
-    <title>Ticket # <%=ticketId%></title>
+    <title>Ticket #<c:out value="${ticketId}"/></title>
 </head>
 <body>
-<a href="<c:url value='/login'>
-        <c:param name='logout'/>
-    </c:url>">Logout</a>
+<a href="<c:url value='/logout'/>">Logout</a>
 <h2>Ticket</h2>
-<h3>Ticket # <%=ticketId%>: <%=ticket.getSubject()%></h3>
-<p><%=ticket.getBody()%></p>
-<%if (ticket.hasAttachment()) {%>
-<a href="ticket?action=download&ticketId=<%=ticketId%>&attachment=<%=ticket.getAttachment().getName()%>">
-    <%=ticket.getAttachment().getName()%></>
-<%}%>
-<br><a href="ticket">Return to ticket list</a>
+<h3>Ticket #<c:out value="${ticketId}"/>: <c:out value="${ticket.subject}"/></h3>
+<p><c:out value="${ticket.body}"/></p>
+<c:if test="${ticket.hasAttachment()}">
+    <a href="<c:url value='/ticket/${ticketId}/attachment/${ticket.attachment.name}' />">
+        <c:out value="${ticket.attachment.name}"/></a>
+</c:if>
+<br><a href="<c:url value='/ticket/list'/>">Return to ticket list</a>
 
 </body>
 </html>

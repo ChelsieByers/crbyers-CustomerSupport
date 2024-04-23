@@ -1,16 +1,10 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="now" value="<%=System.currentTimeMillis()%>" />
 <html>
 <head>
     <title>Ticket Session Admin View</title>
 </head>
 <body>
-<%--logout button--%>
-<a href="<c:url value='/login'>
-        <c:param name='logout'/>
-    </c:url>">Logout</a>
+<a href="<c:url value='/logout'/>">Logout</a>
 <h2>Sessions</h2>
-<%--for loop to show the number of sessions--%>
 There are a total of <c:out value="${numSessions}"/> active sessions going on.
 <ul>
     <c:forEach items="${sessionList}" var="s">

@@ -6,17 +6,22 @@
 
 //This program will allow a user to input a ticket to report any support issues with their accounts>
 
-package com.example.crbyerscustomersupport;
+package com.example.crbyerscustomersupport.site;
 
 public class Attachment {
-    //set up my variables
+    private String name;
+    private byte[] contents;
 
-    private static String name;
+    // Constructors, getters, and setters
+    public Attachment() {
+    }
 
-    private static byte[] contents;
+    public Attachment(String name, byte[] contents) {
+        this.name = name;
+        this.contents = contents;
+    }
 
-    //set up my getters and setters
-    public static String getName() {
+    public String getName() {
         return name;
     }
 
@@ -24,12 +29,12 @@ public class Attachment {
         this.name = name;
     }
 
-    public static byte[] getContents() {
+    public byte[] getContents() {
         return contents;
     }
-    //set up my java bean contents
 
     public void setContents(byte[] contents) {
         this.contents = contents;
     }
 }
+

@@ -1,23 +1,19 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Create a New Ticket Form</title>
+    <title>Create a ticket</title>
 </head>
 <body>
-<a href="<c:url value='/login'>
-        <c:param name='logout'/>
-    </c:url>">Logout</a>
-
+<a href="<c:url value='/logout'/>">Logout</a>
 <h2>Create a Ticket</h2>
-<form method="POST" action="ticket" enctype="multipart/form-data">
-    <input type="hidden" name="action" value="create">
-    Subject:<br>
-    <input type="text" name="subject"><br><br>
-    Body:<br>
-    <textarea name="body" rows="25" cols="100"></textarea><br><br>
+
+<form:form method="POST" action="create" modelAttribute="ticket" enctype="multipart/form-data">
+    <form:label path="subject">Subject:</form:label><br>
+    <form:input path="subject"/><br><br>
+    <form:label path="body">Body:</form:label><br>
+    <form:textarea path="body" rows="25" cols="100"/><br><br>
     <b>Attachment</b><br>
-    <input type="file" name="file1"><br><br>
+    <form:input path="attachment" type="file"/><br><br>
     <input type="submit" value="Submit">
-</form>
+</form:form>
 </body>
 </html>
