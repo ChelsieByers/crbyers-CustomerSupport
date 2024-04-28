@@ -36,12 +36,11 @@ public class TicketController {
         ticket.setSubject(form.getSubject());
         ticket.setBody(form.getBody());
 
-
         MultipartFile file = form.getAttachment();
         Attachment attachment = new Attachment();
         attachment.setName(file.getOriginalFilename());
         attachment.setContents(file.getBytes());
-        if ((attachment.getName() != null && attachment.getName().length() > 0) ||
+        if ((attachment.getName() != null && !attachment.getName().isEmpty()) ||
                 (attachment.getContents() != null && attachment.getContents().length > 0)) {
             ticket.setAttachment(attachment);
         }
@@ -96,30 +95,23 @@ public class TicketController {
     public static class TicketForm {
         private String subject;
         private String body;
-
         private MultipartFile attachment;
 
         public String getSubject() {
             return subject;
         }
-
         public void setSubject(String subject) {
             this.subject = subject;
         }
-
         public String getBody() {
             return body;
         }
-
         public void setBody(String body) {
             this.body = body;
         }
-
-
         public MultipartFile getAttachment() {
             return attachment;
         }
-
         public void setAttachment(MultipartFile attachment) {
             this.attachment = attachment;
         }
