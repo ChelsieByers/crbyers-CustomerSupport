@@ -6,9 +6,9 @@
 <h2>Login</h2>
 You must log in to access the ticket website.<br><br>
 <c:if test="${loginFailed == true}">
-    <b><c:out value="The username or password you entered is not correct, Please try again."></c:out></b><br>
+    <c:out value="The username or password you entered is not correct, Please try again."></c:out><br>
 </c:if>
-<form:form method="POST" action="login" modelAttribute="loginForm">
+<form:form method="POST" action="/login" modelAttribute="loginForm">
     <form:label path="username">Username:&nbsp;</form:label>
     <form:input path="username"/><br><br>
     <form:label path="password">Password:&nbsp;</form:label>

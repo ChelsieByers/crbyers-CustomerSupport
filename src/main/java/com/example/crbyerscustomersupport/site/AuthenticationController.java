@@ -19,19 +19,19 @@ import java.util.Map;
 public class AuthenticationController {
     public static final Map<String, String> userDB = new Hashtable<>();
     static {
-        userDB.put("Lucas", "admin123");
-        userDB.put("John", "password123");
-        userDB.put("Susie", "greenmountains");
+        userDB.put("Chelsie", "admin123");
+        userDB.put("Oryol", "password123");
+        userDB.put("Amanda", "password456");
     }
 
     @RequestMapping("logout")
     public View logout(HttpSession session) {
         session.invalidate();
 
-        return new RedirectView("login", true, false);
+        return new RedirectView("/login", true, false);
     }
 
-    @GetMapping("login")
+    @GetMapping("/login")
     public ModelAndView loginForm(Model model, HttpSession session) {
         if (session.getAttribute("username") != null) {
             return new ModelAndView(new RedirectView("/ticket/list", true, false));
@@ -40,7 +40,7 @@ public class AuthenticationController {
         return new ModelAndView("login", "loginForm", new LoginForm());
     }
 
-    @PostMapping("login")
+    @PostMapping("/login")
     public ModelAndView loginCheck(@ModelAttribute("loginForm")LoginForm form,
                                    Model model,
                                    HttpSession session,

@@ -19,7 +19,7 @@ public class AuthenticationFilter implements Filter {
         HttpSession session = ((HttpServletRequest)servletRequest).getSession(false); // don't create a session if doesn't exit
         //redirect
         if(session == null || session.getAttribute("username") == null) {
-            ((HttpServletResponse)servletResponse).sendRedirect("login");
+            ((HttpServletResponse)servletResponse).sendRedirect("/login");
         }
         else {
             filterChain.doFilter(servletRequest, servletResponse);
