@@ -7,7 +7,7 @@
 //This program will allow a user to test their ticketing system for any failures>
 
 //import com.example.crbyerscustomersupport.site.Ticket;
-//import com.example.crbyerscustomersupport.site.Attachment;
+//import com.example.crbyerscustomersupport.entities.Attachment;
 //import org.junit.jupiter.api.Test;
 //
 //import static org.junit.jupiter.api.Assertions.assertEquals;
