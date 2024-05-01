@@ -9,6 +9,8 @@
 
 package com.example.crbyerscustomersupport.site;
 
+import com.example.crbyerscustomersupport.entities.Attachment;
+
 public class Ticket {
     private String subject;
     private String body;

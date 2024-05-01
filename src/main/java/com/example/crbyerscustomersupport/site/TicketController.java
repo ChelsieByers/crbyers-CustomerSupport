@@ -1,5 +1,6 @@
 package com.example.crbyerscustomersupport.site;
 
+import com.example.crbyerscustomersupport.entities.Attachment;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
