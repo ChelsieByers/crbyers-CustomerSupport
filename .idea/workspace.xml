@@ -9,26 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e32dbb1e-1fbe-46ee-a1fc-0d3acbb91602" name="Changes" comment="Module 9 Build 1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/AttachmentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/DefaultAttachmentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/DefaultTicketRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/DefaultTicketService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/GenericBaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/GenericJpaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/GenericRespository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/TicketRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/TicketService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_23_2024_2_46_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_23_2024_2_46_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_23_2024_2_58_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_23_2024_2_58_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_23_2024_2_59_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_23_2024_2_59_PM__Changes_.xml" beforeDir="false" />
+    <list default="true" id="e32dbb1e-1fbe-46ee-a1fc-0d3acbb91602" name="Changes" comment="Module 9 Build 2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/entities/UserPrincipal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/AuthenticationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/DefaultAuthenticationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/DefaultUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/UserPrincipalRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/TicketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/listTickets.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/listTickets.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/AuthenticationFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +81,9 @@
         <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -416,7 +409,8 @@
       <workItem from="1713991130952" duration="8956000" />
       <workItem from="1714092817367" duration="9000" />
       <workItem from="1714092872696" duration="15420000" />
-      <workItem from="1714504858600" duration="10232000" />
+      <workItem from="1714504858600" duration="10556000" />
+      <workItem from="1714676732735" duration="4878000" />
     </task>
     <task id="LOCAL-00001" summary="Initial ticket, attachment, and testing classes">
       <option name="closed" value="true" />
@@ -530,7 +524,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714527101850</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Module 9 Build 2">
+      <option name="closed" value="true" />
+      <created>1714608494872</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1714608494872</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -560,6 +562,7 @@
     <MESSAGE value="Module 7 Build2" />
     <MESSAGE value="Module 7 Build 3 and Module 5 fix" />
     <MESSAGE value="Module 9 Build 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Module 9 Build 1" />
+    <MESSAGE value="Module 9 Build 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Module 9 Build 2" />
   </component>
 </project>

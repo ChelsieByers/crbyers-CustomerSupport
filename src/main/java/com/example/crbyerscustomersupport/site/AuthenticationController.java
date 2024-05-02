@@ -1,7 +1,10 @@
 package com.example.crbyerscustomersupport.site;
 
+import com.example.crbyerscustomersupport.entities.UserPrincipal;
+import jakarta.inject.Inject;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
+import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,18 +15,20 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.View;
 import org.springframework.web.servlet.view.RedirectView;
 
+import java.security.Principal;
 import java.util.Hashtable;
 import java.util.Map;
 
 @Controller
 public class AuthenticationController {
-    public static final Map<String, String> userDB = new Hashtable<>();
-    static {
-        userDB.put("Chelsie", "admin123");
-        userDB.put("Oryol", "password123");
-        userDB.put("Amanda", "password456");
-    }
+//    public static final Map<String, String> userDB = new Hashtable<>();
+//    static {
+//        userDB.put("Chelsie", "admin123");
+//        userDB.put("Oryol", "password123");
+//        userDB.put("Amanda", "password456");
+//    }
 
+    @Inject AuthenticationService authenticationService;
     @RequestMapping("logout")
     public View logout(HttpSession session) {
         session.invalidate();
@@ -33,7 +38,7 @@ public class AuthenticationController {
 
     @GetMapping("/login")
     public ModelAndView loginForm(Model model, HttpSession session) {
-        if (session.getAttribute("username") != null) {
+        if (UserPrincipal.getPrincipal(session) != null) {
             return new ModelAndView(new RedirectView("/ticket/list", true, false));
         }
         model.addAttribute("loginFailed", false);
@@ -46,23 +51,30 @@ public class AuthenticationController {
                                    HttpSession session,
                                    HttpServletRequest request) {
         // already logged in
-        if (session.getAttribute("username") != null) {
+        if (UserPrincipal.getPrincipal(session) != null) {
             return new ModelAndView(new RedirectView("/ticket/list", true, false));
         }
 
-        String username = form.getUsername();
-        String password = form.getPassword();
 
-        if (username == null || password == null || !userDB.containsKey(username) ||
-                !password.equals(userDB.get(username))) {
+        Principal principal;
+
+        try{
+            principal = authenticationService.authenticate(form.getUsername(), form.getPassword());
+        }
+        catch(ConstraintViolationException e) {
+            //validation error
+            return new ModelAndView("login");
+        }
+
+        if (principal == null) {
+            form.setPassword(null);
             model.addAttribute("loginFailed", true);
             model.addAttribute("loginForm", form);
-
             return new ModelAndView("login");
         }
 
         // we are logged in successfully
-        session.setAttribute("username", username);
+        UserPrincipal.setPrincipal(session, principal);
         request.changeSessionId();
         return new ModelAndView(new RedirectView("/ticket/list", true, false));
 
