@@ -12,6 +12,7 @@ package com.example.crbyerscustomersupport.site;
 import com.example.crbyerscustomersupport.entities.Attachment;
 
 public class Ticket {
+    private long id;
     private String subject;
     private String body;
     private Attachment attachment;
@@ -23,6 +24,14 @@ public class Ticket {
     public Ticket(String subject, String body) {
         this.subject = subject;
         this.body = body;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getSubject() {
@@ -47,6 +56,11 @@ public class Ticket {
 
     public void setAttachment(Attachment attachment) {
         this.attachment = attachment;
+    }
+
+    public boolean hasAttachment() {
+        return attachment != null && attachment.getName().length() > 0 && attachment.getContents().length > 0;
+
     }
 }
 
