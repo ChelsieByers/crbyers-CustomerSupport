@@ -9,17 +9,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e32dbb1e-1fbe-46ee-a1fc-0d3acbb91602" name="Changes" comment="Module 7 Build 3 and Module 5 fix">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/entities/TicketEntity.java" afterDir="false" />
+    <list default="true" id="e32dbb1e-1fbe-46ee-a1fc-0d3acbb91602" name="Changes" comment="Module 9 Build 1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/AttachmentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/DefaultAttachmentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/DefaultTicketRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/DefaultTicketService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/GenericBaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/GenericJpaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/GenericRespository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/TicketRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/TicketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_23_2024_2_46_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_23_2024_2_46_PM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_23_2024_2_58_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_23_2024_2_58_PM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_23_2024_2_59_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_23_2024_2_59_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/Config/RootContextConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/Config/RootContextConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/Attachment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/entities/Attachment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/Ticket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/crbyerscustomersupport/site/TicketController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/listTickets.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/listTickets.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/view/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TicketTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TicketTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +40,7 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Jsp File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -406,7 +416,7 @@
       <workItem from="1713991130952" duration="8956000" />
       <workItem from="1714092817367" duration="9000" />
       <workItem from="1714092872696" duration="15420000" />
-      <workItem from="1714504858600" duration="4933000" />
+      <workItem from="1714504858600" duration="10232000" />
     </task>
     <task id="LOCAL-00001" summary="Initial ticket, attachment, and testing classes">
       <option name="closed" value="true" />
@@ -504,7 +514,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714326044249</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Module 9 Build 1">
+      <option name="closed" value="true" />
+      <created>1714527045725</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1714527045725</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Module 9 Build 1">
+      <option name="closed" value="true" />
+      <created>1714527101850</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1714527101850</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,6 +559,7 @@
     <MESSAGE value="Module 7 Build1" />
     <MESSAGE value="Module 7 Build2" />
     <MESSAGE value="Module 7 Build 3 and Module 5 fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Module 7 Build 3 and Module 5 fix" />
+    <MESSAGE value="Module 9 Build 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Module 9 Build 1" />
   </component>
 </project>
